@@ -59,7 +59,7 @@ class Mine {
     return dirt.map((repo) => {
       return {
         '<usuário>/<repositório>': repo.nameWithOwner,
-        'Nº de estrelas': repo.stargazerCount,
+        Estrelas: repo.stargazerCount,
         'Idade (anos)': moment().diff(repo.createdAt, 'years', true).toFixed(2),
         'Data de criação': repo.createdAt,
         Forks: repo.forkCount,
