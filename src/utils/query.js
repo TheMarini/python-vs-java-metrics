@@ -12,14 +12,14 @@ module.exports = (cursor, language) => {
         ... on Repository {
           nameWithOwner
           stargazerCount
+          createdAt
+          forkCount
           watchers {
             totalCount
           }
-          forkCount
           releases {
             totalCount
           }
-          createdAt
         }
       }
     }
