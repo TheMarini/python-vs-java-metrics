@@ -4,14 +4,18 @@ const fetch = require('./utils/fetch');
 const l = require('./utils/logger');
 
 class Mine {
-  constructor(objective, current = 1) {
+  constructor(objective, language) {
     this.objective = objective;
-    this.current = current;
+    this.language = language;
+    this.file = `./${this.language ? this.language : 'results'}.csv`;
+    this.current = 1;
     this.cursor = null;
   }
 
   async start(token) {
-    l.title('\n--- Iniciando busca ---');
+    l.title(
+      `\n--- Iniciando busca ${this.language ? `(${this.language}) ` : ''}---`
+    );
     const digs = [];
     let tag = `[${this.current}/${this.objective}]`;
     while (this.current <= this.objective) {
@@ -22,15 +26,15 @@ class Mine {
     }
     await Promise.all(digs);
     l.title('--- Fim da busca ---\n');
-    l.info('Veja o resultado em storage.csv :D');
+    l.info(`Veja o resultado em ${this.file} :D`);
   }
 
   async dig(token, tag) {
     try {
-      await fetch(token, this.cursor).then((res) => {
+      await fetch(token, this.cursor, this.language).then((res) => {
         this.cursor = res.pageInfo.endCursor || null;
         this.current += 1;
-        return Mine.store(Mine.polish(res.nodes, tag), tag);
+        return Mine.store(this.file, Mine.polish(res.nodes, tag), tag);
       });
     } catch (e) {
       l.error(`${tag} Erro na requisição:`, e.message);
@@ -38,12 +42,15 @@ class Mine {
     }
   }
 
-  static async store(data, tag) {
+  static async store(file, data, tag) {
     console.log(`${tag} Salvando...`);
     return new ObjectsToCsv(data)
-      .toDisk('./storage.csv', { append: true, bom: true })
+      .toDisk(file, {
+        append: true,
+        bom: true,
+      })
       .then(() => {
-        l.success(`${tag} Salvo em storage.csv`);
+        l.success(`${tag} Salvo em ${file}`);
       });
   }
 
@@ -52,23 +59,12 @@ class Mine {
     return dirt.map((repo) => {
       return {
         '<usuário>/<repositório>': repo.nameWithOwner,
-        'Nº de estrelas': repo.stargazers.totalCount,
+        'Nº de estrelas': repo.stargazerCount,
         'Idade (anos)': moment().diff(repo.createdAt, 'years', true).toFixed(2),
         'Data de criação': repo.createdAt,
-        'Último push (dias)': moment()
-          .diff(repo.pushedAt, 'days', true)
-          .toFixed(2),
-        'Data do último push': repo.pushedAt,
-        'Linguagem principal': repo.primaryLanguage
-          ? repo.primaryLanguage.name
-          : 'N/A',
-        'Nº de PRs aceitas': repo.mergedPullRequests.totalCount,
-        'Nº de releases': repo.releases.totalCount,
-        'Proporção de issues fechadas': (
-          repo.closedIssues.totalCount / repo.totalIssues.totalCount || 0
-        ).toFixed(2),
-        'Issues fechadas': repo.closedIssues.totalCount,
-        'Total de issues': repo.totalIssues.totalCount,
+        Forks: repo.forkCount,
+        Watchers: repo.watchers.totalCount,
+        Releases: repo.releases.totalCount,
       };
     });
   }
