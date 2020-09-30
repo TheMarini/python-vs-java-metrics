@@ -7,7 +7,7 @@ class Mine {
   constructor(objective, language) {
     this.objective = objective;
     this.language = language;
-    this.file = `./${this.language ? this.language : 'results'}.csv`;
+    this.file = `./data/${this.language ? this.language : 'results'}.csv`;
     this.current = 1;
     this.cursor = null;
   }
