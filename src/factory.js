@@ -2,9 +2,9 @@ const Token = require('./utils/token');
 const Mine = require('./mine');
 
 class Factory {
-  constructor(token, results) {
+  constructor(token, objective, language) {
     this.token = new Token(token);
-    this.mine = new Mine(results);
+    this.mine = new Mine(objective, language);
   }
 
   async start() {
