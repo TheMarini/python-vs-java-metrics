@@ -11,26 +11,15 @@ module.exports = (cursor, language) => {
       nodes {
         ... on Repository {
           nameWithOwner
-          createdAt
-          pushedAt
-          stargazers {
+          stargazerCount
+          watchers {
             totalCount
           }
-          mergedPullRequests: pullRequests(states: MERGED) {
-            totalCount
-          }
+          forkCount
           releases {
             totalCount
           }
-          primaryLanguage {
-            name
-          }
-          closedIssues: issues(states: CLOSED) {
-            totalCount
-          }
-          totalIssues: issues {
-            totalCount
-          }
+          createdAt
         }
       }
     }
