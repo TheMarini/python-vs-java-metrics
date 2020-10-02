@@ -1,7 +1,7 @@
 {
-  "name": "metrics-from-popular-repositories",
-  "version": "1.0.0",
-  "description": "Metrics from most popular repositories on GitHub",
+  "name": "python-vs-java-metrics",
+  "version": "0.1.0",
+  "description": "Comparison of python metrics versus java",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheMarini/LAB-6.git"
+    "url": "git+https://github.com/TheMarini/python-vs-java-metrics.git"
   },
   "author": "Bruno Marini",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheMarini/LAB-6/issues"
+    "url": "https://github.com/TheMarini/python-vs-java-metrics/issues"
   },
-  "homepage": "https://github.com/TheMarini/LAB-6#readme",
+  "homepage": "https://github.com/TheMarini/python-vs-java-metrics#readme",
   "dependencies": {
     "axios": "^0.20.0",
     "dotenv": "^8.2.0",
