@@ -3,7 +3,7 @@
 ## :card_index: Sumário
 
 1. [:label: Versões](#label-versões)
-2. [:abacus: Dados](#abacus-dados)
+2. [:abacus: Dados](#abacusdados)
 3. [:information_source: Introdução](#information_source-introdução)
 4. [:fire: Instalação](#fire-instalação)
 5. [:busts_in_silhouette: Autores](#busts_in_silhouette-autores)
