@@ -4,6 +4,7 @@ const colors = {
   green: '\x1b[32m%s\x1b[0m',
   red: '\x1b[31m%s\x1b[0m',
   magenta: '\x1b[35m%s\x1b[0m',
+  yellow: '\x1b[33m%s\x1b[0m',
 };
 
 module.exports = {
@@ -24,6 +25,9 @@ module.exports = {
   },
   error(...m) {
     console.error(colors.red, ...m);
+  },
+  status(...m) {
+    console.error(colors.yellow, ...m);
   },
   jump() {
     console.log('');
