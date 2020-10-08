@@ -23,7 +23,7 @@ As métricas - e as futuras análises sobre elas - serão baseadas conforme os d
 
 Nesta segunda entrega do projeto, o objetivo foi o seguinte:
 
-> **Sprint 01:** mineração dos repositórios populares Python e Java (.csv com os valores de todas as métricas dos top-100 repositórios, bem como os scripts de coleta utilizados para mineração e análise dos repositórios)
+> **Sprint 02:** mineração dos repositórios populares Python e Java (.csv com os valores de todas as métricas dos top-100 repositórios, bem como os scripts de coleta utilizados para mineração e análise dos repositórios)
 > - Valor: 7 pontos
 > - Entrega em 07/10/2020 até às 18:30 no Canvas e no SGA
 
