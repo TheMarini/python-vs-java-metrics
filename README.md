@@ -17,7 +17,7 @@
 
 ## :abacus:	Dados
 
-As métricas - e as futuras análises sobre elas - serão baseadas conforme os dados diponíveis em [python.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.2.0/data/python.csv) e [java.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.2.0/data/java.csv) presentes neste repositório, obtidos em 07/10/2020 às 23h10 através do código descrito a seguir.
+As métricas - e as futuras análises sobre elas - serão baseadas conforme os dados diponíveis em [python.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.2.0/data/python.csv) e [java.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.2.0/data/java.csv) presentes neste repositório, obtidos em 07/10/2020 às 23h30 através do código descrito a seguir.
 
 ## :information_source: Introdução
 
