@@ -10,23 +10,24 @@
 
 ## :label: Versões
 
-- [Sprint 1 (v0.1.0) - _current_](https://github.com/TheMarini/python-vs-java-metrics/tree/v0.1.0)
+- [Sprint 2 (v0.2.0) - _current_](https://github.com/TheMarini/python-vs-java-metrics/tree/v0.2.0)
+- [Sprint 1 (v0.1.0)](https://github.com/TheMarini/python-vs-java-metrics/tree/v0.1.0)
 
 **Obs.:** essa lista pode estar desatualizada conforme o lançamento de novas _releases_. A versão atualizada sempre estará no último lançamento feito, o qual se encontra na [branch master](https://github.com/TheMarini/python-vs-java-metrics).
 
 ## :abacus:	Dados
 
-As métricas - e as futuras análises sobre elas - serão baseadas conforme os dados diponíveis em [python.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.1.0/data/python.csv) e [java.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.1.0/data/java.csv) presentes neste repositório, obtidos em 30/09/2020 às 18h55 através do código descrito a seguir.
+As métricas - e as futuras análises sobre elas - serão baseadas conforme os dados diponíveis em [python.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.2.0/data/python.csv) e [java.csv](https://github.com/TheMarini/python-vs-java-metrics/blob/v0.2.0/data/java.csv) presentes neste repositório, obtidos em 07/10/2020 às 23h10 através do código descrito a seguir.
 
 ## :information_source: Introdução
 
-Nesta primeira entrega do projeto, o objetivo foi o seguinte:
+Nesta segunda entrega do projeto, o objetivo foi o seguinte:
 
-> **Sprint 01:** arquivo .csv com a lista dos top-100 repositórios Java e os top-100 repositórios Python, bem como os scripts de coleta utilizados para mineração e análise dos repositórios
-> - Valor: 5 pontos
-> - Entrega em 30/09/2020 até às 18:30 no Canvas e no SGA
+> **Sprint 01:** mineração dos repositórios populares Python e Java (.csv com os valores de todas as métricas dos top-100 repositórios, bem como os scripts de coleta utilizados para mineração e análise dos repositórios)
+> - Valor: 7 pontos
+> - Entrega em 07/10/2020 até às 18:30 no Canvas e no SGA
 
-Tendo isto em vista, foi desenvolvido um _script_ em Node.js que, a partir de um _token_ da API do GitHub, realiza uma busca paginada da _query_ GraphQL a seguir - alternando somente o atributo `language` entre "Python" e "Java", conforme desejado - enquanto, paralelamente, os resultados são salvos em seus respectivos arquivos CSV.
+Tendo isto em vista, foi desenvolvido um _script_ em Node.js que, a partir de um _token_ da API do GitHub, realiza uma busca paginada da _query_ GraphQL a seguir - alternando somente o atributo `language` entre "Python" e "Java", conforme desejado - e analisa o **LOC**, **SLOC** e **CLOC** de cada repositório enquanto, paralelamente, os resultados são salvos em seus respectivos arquivos CSV.
 
 
 ```GraphQL
@@ -76,3 +77,4 @@ Tendo isto em vista, foi desenvolvido um _script_ em Node.js que, a partir de um
 ## :busts_in_silhouette: Autores
 
 - [Bruno Marini](https://github.com/TheMarini)
+
