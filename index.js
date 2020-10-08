@@ -16,6 +16,7 @@ pythonFactory.start().then(() => {
   const javaFactory = new Factory(token, pages, 'java');
 
   javaFactory.start().then(() => {
+    // The end
     process.exit();
   });
 });
