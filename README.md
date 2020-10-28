@@ -19,7 +19,7 @@
 
 ## :spiral_notepad: Relatório Final
 
-[Link para o PDF com as análises e métricas](https://github.com/TheMarini/metrics-from-popular-repositories/blob/v1.0.0/docs/Relatório%20Final.pdf).
+[Link para o PDF com as análises e métricas](https://github.com/TheMarini/python-vs-java-metrics/blob/v1.0.0/docs/Relatório%20Final.pdf).
 
 ## :abacus: Dados
 
